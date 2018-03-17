@@ -10,18 +10,24 @@ using System.Windows.Forms;
 
 namespace HALLRENTAL
 {
-    public partial class Form1 : Form
+    public partial class dashboard : Form
     {
-        public Form1()
+        public dashboard()
         {
             InitializeComponent();
+            slider1.BringToFront();
+            
         }
 
-        private void login_Click(object sender, EventArgs e)
+        private void view_Click(object sender, EventArgs e)
         {
-            dashboard org = new dashboard();
-            org.Show();
-            this.Hide();
+            halls1.BringToFront();
+        }
+
+        private void home_Click(object sender, EventArgs e)
+        {
+
+            slider1.BringToFront();
         }
     }
 }
