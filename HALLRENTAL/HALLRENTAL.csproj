@@ -70,6 +70,12 @@
     <Compile Include="user controls\halls.Designer.cs">
       <DependentUpon>halls.cs</DependentUpon>
     </Compile>
+    <Compile Include="user controls\mainhall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user controls\mainhall.Designer.cs">
+      <DependentUpon>mainhall.cs</DependentUpon>
+    </Compile>
     <Compile Include="user controls\slider.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </Compile>
     <EmbeddedResource Include="user controls\halls.resx">
       <DependentUpon>halls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user controls\mainhall.resx">
+      <DependentUpon>mainhall.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user controls\slider.resx">
       <DependentUpon>slider.cs</DependentUpon>
