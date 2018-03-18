@@ -19,12 +19,7 @@ namespace HALLRENTAL
             btn1.Hide();
             btn2.Hide();
             btn3.Hide();
-            label2.Hide();
-            label3.Hide();
-            label4.Hide();
-            label5.Hide();
-            label6.Hide();
-
+           
 
 
         }
@@ -35,11 +30,7 @@ namespace HALLRENTAL
             btn1.Show();
             btn2.Show();
             btn3.Show();
-            label2.Hide();
-            label3.Hide();
-            label4.Hide();
-            label5.Hide();
-            label6.Hide();
+            
 
 
 
@@ -63,7 +54,23 @@ namespace HALLRENTAL
 
         private void btn1_Click(object sender, EventArgs e)
         {
-           
+            first org = new first();
+            org.Show();
+            this.Hide();
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            second ord = new second();
+            ord.Show();
+            this.Hide();
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            third orn = new third();
+            orn.Show();
+            this.Hide();
         }
     }
 }

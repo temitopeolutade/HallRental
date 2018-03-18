@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.username = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.password = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -38,10 +39,10 @@
             this.signup = new Bunifu.Framework.UI.BunifuThinButton2();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl_Msg = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,6 +53,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(696, 42);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(130, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // bunifuElipse1
             // 
@@ -144,6 +155,7 @@
             this.signup.Size = new System.Drawing.Size(177, 42);
             this.signup.TabIndex = 5;
             this.signup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.signup.Click += new System.EventHandler(this.signup_Click);
             // 
             // checkBox1
             // 
@@ -165,21 +177,21 @@
             this.logo.TabIndex = 7;
             this.logo.TabStop = false;
             // 
-            // pictureBox1
+            // lbl_Msg
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 39);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.lbl_Msg.AutoSize = true;
+            this.lbl_Msg.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Msg.Location = new System.Drawing.Point(52, 329);
+            this.lbl_Msg.Name = "lbl_Msg";
+            this.lbl_Msg.Size = new System.Drawing.Size(0, 28);
+            this.lbl_Msg.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(696, 379);
+            this.Controls.Add(this.lbl_Msg);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.signup);
@@ -189,10 +201,11 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,6 +222,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 login;
         private Bunifu.Framework.UI.BunifuMetroTextbox password;
         private Bunifu.Framework.UI.BunifuMetroTextbox username;
+        private System.Windows.Forms.Label lbl_Msg;
     }
 }
 

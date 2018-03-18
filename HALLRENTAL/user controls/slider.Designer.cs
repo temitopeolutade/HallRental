@@ -29,17 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(slider));
             this.slide = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.slide)).BeginInit();
             this.SuspendLayout();
             // 
             // slide
             // 
-            this.slide.Location = new System.Drawing.Point(0, 3);
+            this.slide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.slide.Image = ((System.Drawing.Image)(resources.GetObject("slide.Image")));
+            this.slide.Location = new System.Drawing.Point(0, 0);
             this.slide.Name = "slide";
-            this.slide.Size = new System.Drawing.Size(461, 235);
-            this.slide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.slide.Size = new System.Drawing.Size(495, 272);
+            this.slide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.slide.TabIndex = 0;
             this.slide.TabStop = false;
             // 
@@ -56,7 +60,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.slide);
             this.Name = "slider";
-            this.Size = new System.Drawing.Size(461, 235);
+            this.Size = new System.Drawing.Size(495, 272);
             ((System.ComponentModel.ISupportInitialize)(this.slide)).EndInit();
             this.ResumeLayout(false);
 
@@ -66,5 +70,6 @@
 
         private System.Windows.Forms.PictureBox slide;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }

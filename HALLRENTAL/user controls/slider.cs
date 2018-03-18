@@ -16,20 +16,21 @@ namespace HALLRENTAL.user_controls
         {
             InitializeComponent();
         }
-        private int imageNumber = 1;
+        private int number3 = 1;
         private void LoadNextImage()
         {
-            if (imageNumber == 5)
+
+            if (number3 == 5)
             {
-                slide.ImageLocation = "C:\\Users\\TEMITOPE OLUTADE PC\\Documents\\Visual Studio 2017\\Projects\\HALLRENTAL\\HALLRENTAL\\image1" + imageNumber + ".jpg";
-                imageNumber = 1;
+                number3 = 1;
             }
-            else
-            {
-                slide.ImageLocation = "C:\\Users\\TEMITOPE OLUTADE PC\\Documents\\Visual Studio 2017\\Projects\\HALLRENTAL\\HALLRENTAL\\image1" + imageNumber + ".jpg";
-                imageNumber += 1;
-            }
+            slide.ImageLocation = string.Format(@"imgss\{0}.jpg", number3);
+            number3++;
+
         }
+
+
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
