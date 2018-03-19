@@ -19,6 +19,7 @@ namespace HALLRENTAL
             InitializeComponent();
         }
         public string constring = "Data Source=LAPTOP-3F4N0JP3\\SQLEXPRESS;Initial Catalog=hallrental;Integrated Security=True";
+        
 
         private void login_Click(object sender, EventArgs e)
         {
@@ -27,15 +28,20 @@ namespace HALLRENTAL
                lbl_Msg.Text="ALL 3 ATTEMPTS HAVE FAILED - CONTACT ADMIN";
                 return;
             }
-            SqlConnection scn = new SqlConnection();
-            scn.ConnectionString = "Data Source=LAPTOP-3F4N0JP3\\SQLEXPRESS;Initial Catalog=hallrental;Integrated Security=True";
-            SqlCommand scmd = new SqlCommand("select count (*) as cnt from signup where username=@usr and password=@pwd ", scn);
-            scmd.Parameters.Clear(); 
-            scmd.Parameters.AddWithValue("@usr", username.Text);
-            scmd.Parameters.AddWithValue("@psw", password.Text);
-            scn.Open();
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            SqlDataAdapter mm = new SqlDataAdapter("select count (*) from signup where username ='" + username.Text.ToString() + "' and password='" + password.Text.ToString() + "'", con);
+            DataTable dt = new DataTable();
+            mm.Fill(dt);
+           
+            //else
+           // {
+             //   MessageBox.Show("please enter correct username and password", "alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          //  }
 
-            if (scmd.ExecuteScalar().ToString() == "1")
+
+
+            if (dt.Rows[0][0].ToString() == "1")
             {
                 logo.Image = new Bitmap(@"C: \Users\TEMITOPE OLUTADE PC\Documents\Visual Studio 2017\Projects\HALLRENTAL\granted.jpg");
                 MessageBox.Show("YOU ARE GRANTED WITH ACCESS");
@@ -54,7 +60,7 @@ namespace HALLRENTAL
                 this.username.Text = " ";
                 this.password.Text = " ";
             }
-            scn.Close();
+            con.Close();
 
 
         }
