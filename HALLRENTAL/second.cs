@@ -32,5 +32,32 @@ namespace HALLRENTAL
         {
             LoadImages();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            payment tope = new payment();
+            tope.Show();
+            this.Hide();
+
+        }
+
+        private void home_Click(object sender, EventArgs e)
+        {
+            dashboard ra = new dashboard();
+            ra.Show();
+            this.Hide();
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            third n = new third();
+            n.Show();
+            this.Hide();
+        }
     }
 }

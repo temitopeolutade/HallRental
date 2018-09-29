@@ -72,5 +72,31 @@ namespace HALLRENTAL
             orn.Show();
             this.Hide();
         }
+
+        private void profilep_Click(object sender, EventArgs e)
+        {
+
+            information a = new information();
+            a.Show();
+            this.Hide();
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //logout
+            Form1 ade = new Form1();
+            ade.Show();
+            this.Hide();
+        }
     }
 }

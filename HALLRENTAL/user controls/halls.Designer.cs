@@ -179,7 +179,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(25, 15);
             this.label11.TabIndex = 13;
-            this.label11.Text = "500";
+            this.label11.Text = "800";
             // 
             // label12
             // 
@@ -219,7 +219,7 @@
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(25, 15);
             this.label17.TabIndex = 19;
-            this.label17.Text = "500";
+            this.label17.Text = "300";
             // 
             // label18
             // 

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.exit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.username = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -40,6 +41,8 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.logo = new System.Windows.Forms.PictureBox();
             this.lbl_Msg = new System.Windows.Forms.Label();
+            this.admin = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.passw = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -47,12 +50,25 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.exit);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(696, 42);
             this.panel1.TabIndex = 0;
+            // 
+            // exit
+            // 
+            this.exit.FlatAppearance.BorderSize = 0;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
+            this.exit.Location = new System.Drawing.Point(477, 3);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(35, 36);
+            this.exit.TabIndex = 1;
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // pictureBox1
             // 
@@ -186,11 +202,56 @@
             this.lbl_Msg.Size = new System.Drawing.Size(0, 28);
             this.lbl_Msg.TabIndex = 8;
             // 
+            // admin
+            // 
+            this.admin.ActiveBorderThickness = 1;
+            this.admin.ActiveCornerRadius = 20;
+            this.admin.ActiveFillColor = System.Drawing.Color.DodgerBlue;
+            this.admin.ActiveForecolor = System.Drawing.Color.White;
+            this.admin.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.admin.BackColor = System.Drawing.Color.White;
+            this.admin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("admin.BackgroundImage")));
+            this.admin.ButtonText = "Admin Login";
+            this.admin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.admin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin.ForeColor = System.Drawing.Color.Black;
+            this.admin.IdleBorderThickness = 1;
+            this.admin.IdleCornerRadius = 20;
+            this.admin.IdleFillColor = System.Drawing.Color.White;
+            this.admin.IdleForecolor = System.Drawing.Color.Black;
+            this.admin.IdleLineColor = System.Drawing.Color.DeepPink;
+            this.admin.Location = new System.Drawing.Point(407, 323);
+            this.admin.Margin = new System.Windows.Forms.Padding(5);
+            this.admin.Name = "admin";
+            this.admin.Size = new System.Drawing.Size(173, 42);
+            this.admin.TabIndex = 10;
+            this.admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.admin.Click += new System.EventHandler(this.admin_Click);
+            // 
+            // passw
+            // 
+            this.passw.BackColor = System.Drawing.Color.Transparent;
+            this.passw.FlatAppearance.BorderSize = 0;
+            this.passw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passw.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passw.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.passw.Location = new System.Drawing.Point(473, 238);
+            this.passw.Name = "passw";
+            this.passw.Size = new System.Drawing.Size(159, 28);
+            this.passw.TabIndex = 11;
+            this.passw.Text = "Forgot Password";
+            this.passw.UseVisualStyleBackColor = false;
+            this.passw.Click += new System.EventHandler(this.passw_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(696, 379);
+            this.Controls.Add(this.passw);
+            this.Controls.Add(this.admin);
             this.Controls.Add(this.lbl_Msg);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.checkBox1);
@@ -223,6 +284,9 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox password;
         private Bunifu.Framework.UI.BunifuMetroTextbox username;
         private System.Windows.Forms.Label lbl_Msg;
+        private System.Windows.Forms.Button exit;
+        private Bunifu.Framework.UI.BunifuThinButton2 admin;
+        private System.Windows.Forms.Button passw;
     }
 }
 

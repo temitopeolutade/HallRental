@@ -30,7 +30,7 @@ namespace HALLRENTAL
             }
             SqlConnection con = new SqlConnection(constring);
             con.Open();
-            SqlDataAdapter mm = new SqlDataAdapter("select count (*) from signup where username ='" + username.Text.ToString() + "' and password='" + password.Text.ToString() + "'", con);
+            SqlDataAdapter mm = new SqlDataAdapter("select count (*) from reg where username ='" + username.Text.ToString() + "' and password='" + password.Text.ToString() + "'", con);
             DataTable dt = new DataTable();
             mm.Fill(dt);
            
@@ -67,18 +67,70 @@ namespace HALLRENTAL
 
         private void signup_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(constring);
-            con.Open();
-            if (con.State == System.Data.ConnectionState.Open)
             {
-                string q = "insert into signup(username,password)values('" + username.Text.ToString() + "','" + password.Text.ToString() + "')";
-                SqlCommand cmd = new SqlCommand(q, con);
-                cmd.ExecuteNonQuery();
-                dashboard org = new dashboard();
-                org.Show();
+               // dashboard ad = new dashboard();
+                //ad.Show();
+                 profile gh = new profile();
+                 gh.Show();
+                 this.Hide();
+            }
+
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       
+
+        private void passw_Click(object sender, EventArgs e)
+
+        {
+            password add = new password();
+            add.Show();
+            this.Hide();
+        }
+
+        private void admin_Click(object sender, EventArgs e)
+        {
+            string connection = "Data Source=LAPTOP-3F4N0JP3\\SQLEXPRESS;Initial Catalog=hallrental;Integrated Security=True";
+            SqlConnection cons = new SqlConnection(connection);
+            cons.Open();
+            SqlDataAdapter mm = new SqlDataAdapter("select count (*) from admin where username ='" + username.Text.ToString() + "' and password='" + password.Text.ToString() + "'", cons);
+            DataTable dts = new DataTable();
+            mm.Fill(dts);
+
+
+            if (dts.Rows[0][0].ToString() == "1")
+            {
+                logo.Image = new Bitmap(@"C: \Users\TEMITOPE OLUTADE PC\Documents\Visual Studio 2017\Projects\HALLRENTAL\granted.jpg");
+                MessageBox.Show("Welcome Admin");
+                admin boss = new admin();
+                boss.Show();
                 this.Hide();
 
             }
+
+            else
+            {
+
+                logo.Image = new Bitmap(@"C: \Users\TEMITOPE OLUTADE PC\Documents\Visual Studio 2017\Projects\HALLRENTAL\denied2.jpg");
+                MessageBox.Show("YOU ARE A SCAM ");
+                
+                this.username.Text = " ";
+                this.password.Text = " ";
+            }
+            cons.Close();
+
+            
+        }
+
+        private void passw_Click_1(object sender, EventArgs e)
+        {
+            password af = new password();
+            af.Show();
+            this.Hide();
         }
     }
 }

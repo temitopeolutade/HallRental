@@ -43,6 +43,28 @@ namespace HALLRENTAL
             this.Hide();
         }
 
-        
+        private void first_Load(object sender, EventArgs e)
+        {
+            //nothing here
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            payment ada = new payment();
+            ada.Show();
+            this.Hide();
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            second se = new second();
+            se.Show();
+            this.Hide();
+        }
     }
 }
